@@ -1,0 +1,20 @@
+{
+  "name": "salin",
+  "private": true,
+  "packageManager": "yarn@4.0.1",
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "scripts": {
+    "typecheck": "lerna run typecheck",
+    "build": "lerna run build && yarn typecheck"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "lerna": "^7.4.2"
+  },
+  "license": "MIT"
+}
