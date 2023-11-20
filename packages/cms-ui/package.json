@@ -42,5 +42,9 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "0af567c6bd3d908d5bec5e943e81138887a259c6"
 }
