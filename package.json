@@ -32,5 +32,13 @@
     "tslib": "^2.6.2",
     "typescript": "5.1.6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "monorepo",
+    "lerna",
+    "typescript",
+    "react",
+    "salin",
+    "cms-ui"
+  ]
 }

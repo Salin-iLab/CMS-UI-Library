@@ -3773,7 +3773,7 @@ const RAW_RUNTIME_STATE =
           ["@types/typescript", null],\
           ["resolve", "patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"],\
           ["rollup", "npm:4.5.0"],\
-          ["tslib", null],\
+          ["tslib", "npm:2.6.2"],\
           ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
@@ -3941,6 +3941,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:5e6e62f57869e21474c5fb5cb3bbe2297208ba6d213b26c3696ef6373df5e7129b4e5a362573937079b73afbd37598152f9b74b9528a9f0bb44c6ccf183374ad#npm:18.2.0"],\
           ["rollup", "npm:4.5.0"],\
           ["rollup-plugin-peer-deps-external", "virtual:5e6e62f57869e21474c5fb5cb3bbe2297208ba6d213b26c3696ef6373df5e7129b4e5a362573937079b73afbd37598152f9b74b9528a9f0bb44c6ccf183374ad#npm:2.2.4"],\
+          ["tslib", "npm:2.6.2"],\
           ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "linkType": "SOFT"\
