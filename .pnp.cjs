@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:17b12ef5723e28c28f58bcdd443dbab23145d597ac63b100e52b6a2fb50cc2d5579a5fc89135fd076ada3f15a7ff1aa2b3156be33c5db9ff0962e9a53ff22210#npm:18.2.0"],\
           ["ts-node", "virtual:17b12ef5723e28c28f58bcdd443dbab23145d597ac63b100e52b6a2fb50cc2d5579a5fc89135fd076ada3f15a7ff1aa2b3156be33c5db9ff0962e9a53ff22210#npm:10.9.1"],\
           ["tslib", "npm:2.6.2"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3774,7 +3774,7 @@ const RAW_RUNTIME_STATE =
           ["resolve", "patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"],\
           ["rollup", "npm:4.5.0"],\
           ["tslib", null],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/rollup",\
@@ -3941,7 +3941,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:5e6e62f57869e21474c5fb5cb3bbe2297208ba6d213b26c3696ef6373df5e7129b4e5a362573937079b73afbd37598152f9b74b9528a9f0bb44c6ccf183374ad#npm:18.2.0"],\
           ["rollup", "npm:4.5.0"],\
           ["rollup-plugin-peer-deps-external", "virtual:5e6e62f57869e21474c5fb5cb3bbe2297208ba6d213b26c3696ef6373df5e7129b4e5a362573937079b73afbd37598152f9b74b9528a9f0bb44c6ccf183374ad#npm:2.2.4"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4230,7 +4230,7 @@ const RAW_RUNTIME_STATE =
           ["natural-compare", "npm:1.4.0"],\
           ["semver", "npm:7.5.4"],\
           ["ts-api-utils", "virtual:7f1ddeaa5ccb8d9838ab607e287e40e8d504b890ee89cf171605760cc241570d468f7f40c1a44032cbd4aad0c74b17eb390043014b2170f046aa62704da0f6c9#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -4263,7 +4263,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/visitor-keys", "npm:6.12.0"],\
           ["debug", "virtual:afa9bb9438b9a67b27f31f18db5f637ff150aa286922551b1763d52aa97c3685da04db28dadcec2a414af6254ce40307ab6e8c88b433b63e4224515fdb8570d3#npm:4.3.4"],\
           ["eslint", "npm:8.54.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -4304,7 +4304,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:afa9bb9438b9a67b27f31f18db5f637ff150aa286922551b1763d52aa97c3685da04db28dadcec2a414af6254ce40307ab6e8c88b433b63e4224515fdb8570d3#npm:4.3.4"],\
           ["eslint", "npm:8.54.0"],\
           ["ts-api-utils", "virtual:7f1ddeaa5ccb8d9838ab607e287e40e8d504b890ee89cf171605760cc241570d468f7f40c1a44032cbd4aad0c74b17eb390043014b2170f046aa62704da0f6c9#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/eslint",\
@@ -4344,7 +4344,7 @@ const RAW_RUNTIME_STATE =
           ["is-glob", "npm:4.0.3"],\
           ["semver", "npm:7.5.4"],\
           ["ts-api-utils", "virtual:7f1ddeaa5ccb8d9838ab607e287e40e8d504b890ee89cf171605760cc241570d468f7f40c1a44032cbd4aad0c74b17eb390043014b2170f046aa62704da0f6c9#npm:1.0.3"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -5535,7 +5535,7 @@ const RAW_RUNTIME_STATE =
           ["js-yaml", "npm:4.1.0"],\
           ["parse-json", "npm:5.2.0"],\
           ["path-type", "npm:4.0.0"],\
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
+          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -7612,7 +7612,7 @@ const RAW_RUNTIME_STATE =
           ["strong-log-transformer", "npm:2.1.0"],\
           ["tar", "npm:6.1.11"],\
           ["temp-dir", "npm:1.0.0"],\
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"],\
+          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"],\
           ["upath", "npm:2.0.1"],\
           ["uuid", "npm:9.0.1"],\
           ["validate-npm-package-license", "npm:3.0.4"],\
@@ -9709,7 +9709,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:17b12ef5723e28c28f58bcdd443dbab23145d597ac63b100e52b6a2fb50cc2d5579a5fc89135fd076ada3f15a7ff1aa2b3156be33c5db9ff0962e9a53ff22210#npm:18.2.0"],\
           ["ts-node", "virtual:17b12ef5723e28c28f58bcdd443dbab23145d597ac63b100e52b6a2fb50cc2d5579a5fc89135fd076ada3f15a7ff1aa2b3156be33c5db9ff0962e9a53ff22210#npm:10.9.1"],\
           ["tslib", "npm:2.6.2"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -10338,7 +10338,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["ts-api-utils", "virtual:7f1ddeaa5ccb8d9838ab607e287e40e8d504b890ee89cf171605760cc241570d468f7f40c1a44032cbd4aad0c74b17eb390043014b2170f046aa62704da0f6c9#npm:1.0.3"],\
           ["@types/typescript", null],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -10389,7 +10389,7 @@ const RAW_RUNTIME_STATE =
           ["create-require", "npm:1.1.1"],\
           ["diff", "npm:4.0.2"],\
           ["make-error", "npm:1.3.6"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"],\
           ["v8-compile-cache-lib", "npm:3.0.1"],\
           ["yn", "npm:3.1.1"]\
         ],\
@@ -10502,17 +10502,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441", {\
-        "packageLocation": "./.yarn/cache/typescript-patch-3914634c3a-062c1cee19.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071", {\
+        "packageLocation": "./.yarn/cache/typescript-patch-97a611e52a-c2bded58ab.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.1.6#optional!builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
         ],\
         "linkType": "HARD"\
       }],\
-      ["patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7", {\
-        "packageLocation": "./.yarn/cache/typescript-patch-71fdfda6a2-73c8bad74e.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49", {\
+        "packageLocation": "./.yarn/cache/typescript-patch-d8d4f943dd-c81b9bd20c.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=e012d7"]\
+          ["typescript", "patch:typescript@npm%3A5.3.2#optional!builtin<compat/typescript>::version=5.3.2&hash=29ae49"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12410,12 +12410,6 @@ class ProxiedFS extends FakeFS {
   }
 }
 
-function direntToPortable(dirent) {
-  const portableDirent = dirent;
-  if (typeof dirent.path === `string`)
-    portableDirent.path = npath.toPortablePath(dirent.path);
-  return portableDirent;
-}
 class NodeFS extends BasePortableFakeFS {
   constructor(realFs = fs__default.default) {
     super();
@@ -12742,31 +12736,15 @@ class NodeFS extends BasePortableFakeFS {
   async readdirPromise(p, opts) {
     return await new Promise((resolve, reject) => {
       if (opts) {
-        if (opts.recursive && process.platform === `win32`) {
-          if (opts.withFileTypes) {
-            this.realFs.readdir(npath.fromPortablePath(p), opts, this.makeCallback((results) => resolve(results.map(direntToPortable)), reject));
-          } else {
-            this.realFs.readdir(npath.fromPortablePath(p), opts, this.makeCallback((results) => resolve(results.map(npath.toPortablePath)), reject));
-          }
-        } else {
-          this.realFs.readdir(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
-        }
+        this.realFs.readdir(npath.fromPortablePath(p), opts, this.makeCallback(resolve, reject));
       } else {
-        this.realFs.readdir(npath.fromPortablePath(p), this.makeCallback(resolve, reject));
+        this.realFs.readdir(npath.fromPortablePath(p), this.makeCallback((value) => resolve(value), reject));
       }
     });
   }
   readdirSync(p, opts) {
     if (opts) {
-      if (opts.recursive && process.platform === `win32`) {
-        if (opts.withFileTypes) {
-          return this.realFs.readdirSync(npath.fromPortablePath(p), opts).map(direntToPortable);
-        } else {
-          return this.realFs.readdirSync(npath.fromPortablePath(p), opts).map(npath.toPortablePath);
-        }
-      } else {
-        return this.realFs.readdirSync(npath.fromPortablePath(p), opts);
-      }
+      return this.realFs.readdirSync(npath.fromPortablePath(p), opts);
     } else {
       return this.realFs.readdirSync(npath.fromPortablePath(p));
     }

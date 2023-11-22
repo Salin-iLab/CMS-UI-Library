@@ -2,9 +2,9 @@
   "name": "salin",
   "private": true,
   "version": "0.0.1",
-  "packageManager": "yarn@4.0.2+sha256.825003a0f561ad09a3b1ac4a3b3ea6207af2796d54f62a9420520915721f5186",
+  "packageManager": "yarn@4.0.1",
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
   "scripts": {
     "typecheck": "lerna run typecheck",
@@ -29,7 +29,7 @@
     "react-dom": "^18.2.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2",
-    "typescript": "5.2.2"
+    "typescript": "5.1.6"
   },
   "license": "MIT"
 }
