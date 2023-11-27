@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { ButtonStyledProps } from './Button.types';
 import { css } from '@emotion/react';
-import { colors } from 'theme';
+import { colors } from '../../theme';
 
 const getButtonSize = (size: ButtonStyledProps['size']) => {
 	switch (size) {
@@ -80,4 +80,11 @@ export const StyledButton = styled.button<ButtonStyledProps>`
 			${props.customCSS}
 		`;
 	}}
+
+	&:disabled {
+		border-color: ${colors.gray[500]};
+		background-color: ${colors.gray[300]};
+		color: ${colors.gray[500]};
+		cursor: not-allowed;
+	}
 `;

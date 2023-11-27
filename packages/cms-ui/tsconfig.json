@@ -4,5 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "outDir": "./dist",
-  }
+    "jsx": "react-jsx"
+  },
+  "exclude": ["**/*.stories.tsx"]
 }
