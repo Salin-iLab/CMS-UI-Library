@@ -2,7 +2,7 @@
   "name": "salin",
   "private": true,
   "version": "0.0.1",
-  "packageManager": "yarn@4.0.1",
+  "packageManager": "yarn@4.0.2",
   "workspaces": [
     "packages/**/*",
     "web"
@@ -14,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "web:build": "lerna run --scope web build",
-    "web:dev": "lerna run --scope web dev"
+    "web:dev": "lerna run --scope web dev",
+    "web:preview":"lerna run --scope web preview"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
