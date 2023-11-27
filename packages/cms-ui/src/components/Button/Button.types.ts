@@ -1,12 +1,17 @@
-import { SerializedStyles } from '@emotion/react';
+import { CSSObject } from '@emotion/react';
 import { HTMLAttributes } from 'react';
-import { Themes } from 'theme';
+import { ColorThemes } from '../../theme';
 
 export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-	colorTypes?: Themes;
+	colorTypes?: ColorThemes;
 	types?: 'outline' | 'solid' | 'text';
 	size?: 'sm' | 'md' | 'lg';
-	customCSS?: SerializedStyles;
+	isRounded?: boolean;
+	fullWidth?: boolean;
+	customCSS?: CSSObject;
 }
 
-export type ButtonStyledProps = Pick<ButtonProps, 'types' | 'size' | 'customCSS' | 'colorTypes'>;
+export type ButtonStyledProps = Pick<
+	ButtonProps,
+	'types' | 'size' | 'colorTypes' | 'isRounded' | 'fullWidth' | 'customCSS'
+>;

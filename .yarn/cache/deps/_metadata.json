@@ -1,0 +1,35 @@
+{
+  "hash": "6470db18",
+  "browserHash": "9b7d87f1",
+  "optimized": {
+    "react": {
+      "src": "../react-npm-18.2.0-1eae08fee2-b562d9b569.zip/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "2150af1b",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../react-npm-18.2.0-1eae08fee2-b562d9b569.zip/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "ef90b515",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../react-npm-18.2.0-1eae08fee2-b562d9b569.zip/node_modules/react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "629d476c",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../__virtual__/react-dom-virtual-8d6497397c/0/cache/react-dom-npm-18.2.0-dd675bca1c-66dfc5f93e.zip/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "c059d906",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-ABX6QUIQ": {
+      "file": "chunk-ABX6QUIQ.js"
+    }
+  }
+}

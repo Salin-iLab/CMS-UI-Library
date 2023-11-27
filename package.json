@@ -15,7 +15,7 @@
     "build-storybook": "storybook build",
     "web:build": "lerna run --scope web build",
     "web:dev": "lerna run --scope web dev",
-    "web:preview":"lerna run --scope web preview"
+    "web:preview": "lerna run --scope web preview"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",

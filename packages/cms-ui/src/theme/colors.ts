@@ -1,6 +1,6 @@
 // tailwind color palette v3.3.5
 
-export const color = {
+export const colors = {
 	gray: {
 		50: '#f9fafb',
 		100: '#f3f4f6',
@@ -111,8 +111,4 @@ export const color = {
 	},
 } as const;
 
-export const theme = {
-	...color,
-};
-
-export type Themes = keyof typeof theme;
+export type ColorThemes = keyof typeof colors;
