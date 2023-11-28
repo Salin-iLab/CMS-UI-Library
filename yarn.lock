@@ -6349,6 +6349,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chromatic@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "chromatic@npm:9.1.0"
+  bin:
+    chroma: dist/bin.js
+    chromatic: dist/bin.js
+    chromatic-cli: dist/bin.js
+  checksum: 27d0ff5ef993024301f31d137e9774b051de908d48dcd461c33b51c92e5e7b57cd062eaddafcd02f1c2a98cfe5d5ef26b7fcdf77b76df94e357171074a23b950
+  languageName: node
+  linkType: hard
+
 "ci-info@npm:^3.2.0, ci-info@npm:^3.6.1":
   version: 3.9.0
   resolution: "ci-info@npm:3.9.0"
@@ -7145,7 +7156,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.0, dotenv@npm:~16.3.1":
+"dotenv@npm:^16.0.0, dotenv@npm:^16.3.1, dotenv@npm:~16.3.1":
   version: 16.3.1
   resolution: "dotenv@npm:16.3.1"
   checksum: b95ff1bbe624ead85a3cd70dbd827e8e06d5f05f716f2d0cbc476532d54c7c9469c3bc4dd93ea519f6ad711cb522c00ac9a62b6eb340d5affae8008facc3fbd7
@@ -12553,6 +12564,8 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.11.0"
     "@typescript-eslint/parser": "npm:^6.11.0"
     "@vitejs/plugin-react": "npm:^4.2.0"
+    chromatic: "npm:^9.1.0"
+    dotenv: "npm:^16.3.1"
     eslint: "npm:^8.54.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.4"
