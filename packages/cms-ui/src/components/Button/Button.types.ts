@@ -1,6 +1,6 @@
 import { CSSObject } from '@emotion/react';
-import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
-import { ColorThemes } from '../../theme';
+import { ButtonHTMLAttributes } from 'react';
+import { ColorThemes } from '../../theme/colors';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	colorTypes?: ColorThemes;

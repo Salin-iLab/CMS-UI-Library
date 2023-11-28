@@ -1,5 +1,4 @@
-import { SerializedStyles } from '@emotion/react';
-import { CSSProperties, HTMLAttributes } from 'react';
+import { HTMLAttributes } from 'react';
 
 export interface SpacingProps extends HTMLAttributes<HTMLDivElement> {
 	children?: never;
