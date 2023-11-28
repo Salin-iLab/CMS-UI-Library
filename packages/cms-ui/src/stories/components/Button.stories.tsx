@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from '../../components/Button';
-import { StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-export default {
+const meta: Meta = {
 	title: 'components/Button',
 	component: Button,
 };
@@ -30,3 +30,5 @@ export const LargeButton: Story = {
 		size: 'lg',
 	},
 };
+
+export default meta;
