@@ -36,6 +36,7 @@ export default {
 		}),
 		typescript({
 			tsconfig: './tsconfig.json',
+			exclude: ['**/*.stories.tsx'],
 		}),
 		terser(),
 	],
