@@ -15,25 +15,11 @@ const meta: Meta = {
 
 type Story = StoryObj<typeof Button>;
 
-export const SmallButton: Story = {
+export const Default: Story = {
 	args: {
 		onClick: () => alert('clicked'),
 		children: 'SmallButton',
 		size: 'sm',
-	},
-};
-export const MiddleButton: Story = {
-	args: {
-		onClick: () => alert('clicked'),
-		children: 'MiddleButton',
-		size: 'md',
-	},
-};
-export const LargeButton: Story = {
-	args: {
-		onClick: () => alert('clicked'),
-		children: 'LargeButton',
-		size: 'lg',
 	},
 };
 
