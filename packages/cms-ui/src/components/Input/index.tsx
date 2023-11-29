@@ -1,14 +1,36 @@
 import { Ref, forwardRef } from 'react';
-import { StyledInput, StyledInputLabel, StyledInputLabelText, StyledInputWraaper } from './Input.styled';
+import {
+	StyledInput,
+	StyledInputBox,
+	StyledInputIcon,
+	StyledInputLabel,
+	StyledInputLabelText,
+	StyledInputWraaper,
+} from './Input.styled';
 import { InputProps } from './Input.types';
 
 export const Input = forwardRef(
-	({ labelText, isLabel = true, fullWidth = false, ...props }: InputProps, ref: Ref<HTMLInputElement>) => {
+	(
+		{
+			labelText,
+			colorTypes,
+			isLabel = true,
+			fullWidth = false,
+			sizes = 'md',
+			svgIcon,
+			svgPos = 'left',
+			...props
+		}: InputProps,
+		ref: Ref<HTMLInputElement>
+	) => {
 		return (
 			<StyledInputWraaper>
-				<StyledInputLabel fullWidth={fullWidth}>
-					{isLabel && <StyledInputLabelText>{labelText}</StyledInputLabelText>}
-					<StyledInput ref={ref} {...props} />
+				<StyledInputLabel fullWidth={fullWidth} sizes={sizes} colorTypes={colorTypes}>
+					{isLabel && <StyledInputLabelText sizes={sizes}>{labelText}</StyledInputLabelText>}
+					<StyledInputBox>
+						<StyledInput sizes={sizes} colorTypes={colorTypes} svgPos={svgPos} svgIcon={svgIcon} ref={ref} {...props} />
+						{svgIcon && <StyledInputIcon svgPos={svgPos}>{svgIcon}</StyledInputIcon>}
+					</StyledInputBox>
 				</StyledInputLabel>
 			</StyledInputWraaper>
 		);
