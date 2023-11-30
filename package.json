@@ -16,7 +16,7 @@
     "web:build": "lerna run --scope web build",
     "web:dev": "lerna run --scope web dev",
     "web:preview": "lerna run --scope web preview",
-    "chromatic": "npx chromatic --project-token=chpt_6f56c774a0e3b3d"
+    "chromatic": "npx chromatic"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",
