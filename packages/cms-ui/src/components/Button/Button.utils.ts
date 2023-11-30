@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { ButtonStyledProps } from './Button.types';
-import { colors } from 'theme';
+import { colors } from '../../theme/colors';
 
 export const getButtonSize = (size: ButtonStyledProps['size']) => {
 	switch (size) {
