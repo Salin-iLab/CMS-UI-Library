@@ -24,8 +24,8 @@ export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContex
 	return <RadioProvider value={values}>{children}</RadioProvider>;
 };
 
-export const RadioButton = forwardRef(
-	({ checked, colorTypes = 'blue', value, children, ...props }: RadioProps, ref: Ref<HTMLInputElement>) => {
+export const RadioButton = forwardRef<HTMLInputElement, RadioProps>(
+	({ checked, colorTypes = 'blue', value, children, ...props }, ref) => {
 		const radioContext = useContext(RadioContext);
 
 		if (!children) {
