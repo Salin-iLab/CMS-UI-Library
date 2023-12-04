@@ -4,7 +4,6 @@ import { RadioGroup } from './';
 
 export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
 	colorTypes?: ColorThemes;
-	sizes?: 'sm' | 'md' | 'lg';
 	children: string;
 }
 
