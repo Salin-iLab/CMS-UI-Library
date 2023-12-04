@@ -1,6 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import React, { ChangeEvent, useContext, useState } from 'react';
+import { RadioContext } from '../../components/Radio/Radio.context';
 import { Radio } from '../../components/Radio/index';
-import React from 'react';
 
 const meta: Meta = {
 	title: 'components/Radio',
@@ -10,13 +11,23 @@ const meta: Meta = {
 type Story = StoryObj<typeof Radio>;
 
 const Template: StoryFn<typeof Radio> = args => {
-	return <Radio defaultChecked {...args} />;
+	const [value, setValue] = useState('A');
+
+	const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setValue(e.target.value);
+	};
+
+	return (
+		<Radio.Group onChange={onChange} value={value} name={'test'}>
+			<Radio {...args} value={'A'} />
+			<Radio {...args} value={'B'} />
+		</Radio.Group>
+	);
 };
 
 export const Default: Story = {
 	render: Template,
 	args: {
-		value: 'Radio',
 		checked: true,
 	},
 	argTypes: {

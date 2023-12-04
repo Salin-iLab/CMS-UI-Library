@@ -1,7 +1,6 @@
 import { createContext } from 'react';
+import { RadioContextProps } from './Radio.types';
 
-export const RadioGroupContext = createContext({
-	value: 'test',
-});
+export const RadioContext = createContext<RadioContextProps | null>(null);
 
-export const RadioGroupProvider = RadioGroupContext.Provider;
+export const RadioProvider = RadioContext.Provider;
