@@ -11,10 +11,8 @@ export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContex
 			setValue(e.target.value);
 		}
 
-		if (props.onChange) {
-			props.onChange(e);
-			setValue(e.target.value);
-		}
+		props.onChange(e);
+		setValue(e.target.value);
 	};
 
 	const values: RadioContextProps = {
@@ -23,16 +21,16 @@ export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContex
 		name: props.name,
 	};
 
-	return (
-		<div>
-			<RadioProvider value={values}>{children}</RadioProvider>
-		</div>
-	);
+	return <RadioProvider value={values}>{children}</RadioProvider>;
 };
 
 export const RadioButton = forwardRef(
-	({ checked, colorTypes = 'blue', value, ...props }: RadioProps, ref: Ref<HTMLInputElement>) => {
+	({ checked, colorTypes = 'blue', value, children, ...props }: RadioProps, ref: Ref<HTMLInputElement>) => {
 		const radioContext = useContext(RadioContext);
+
+		if (!children) {
+			throw new Error("Radio component requires 'children' prop.");
+		}
 
 		return (
 			<StyledRadioWrapper colorTypes={colorTypes}>
@@ -52,7 +50,7 @@ export const RadioButton = forwardRef(
 						colorTypes={colorTypes}
 					/>
 				</StyledRadioBox>
-				<StyledText>{value}</StyledText>
+				<StyledText>{children}</StyledText>
 			</StyledRadioWrapper>
 		);
 	}
