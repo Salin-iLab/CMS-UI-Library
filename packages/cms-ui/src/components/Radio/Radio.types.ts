@@ -1,10 +1,11 @@
-import { ChangeEvent, ForwardRefExoticComponent, InputHTMLAttributes } from 'react';
+import { ChangeEvent, ForwardRefExoticComponent, InputHTMLAttributes, ReactNode } from 'react';
 import { ColorThemes } from '../../theme/colors';
 import { RadioGroup } from './';
 
 export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
 	colorTypes?: ColorThemes;
 	sizes?: 'sm' | 'md' | 'lg';
+	children: string;
 }
 
 export interface RadioContextProps {

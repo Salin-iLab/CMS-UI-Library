@@ -19,24 +19,24 @@ const Template: StoryFn<typeof Radio> = args => {
 
 	return (
 		<Radio.Group onChange={onChange} value={value} name={'test'}>
-			<Radio {...args} value={'A'} />
-			<Radio {...args} value={'B'} />
+			<Radio {...args} value={'A'}>
+				A
+			</Radio>
+			<Radio {...args} value={'B'}>
+				B
+			</Radio>
+			<Radio {...args} value={'C'}>
+				C
+			</Radio>
+			<Radio {...args} value={'D'}>
+				D
+			</Radio>
 		</Radio.Group>
 	);
 };
 
 export const Default: Story = {
 	render: Template,
-	args: {
-		checked: true,
-	},
-	argTypes: {
-		value: {
-			control: {
-				type: 'text',
-			},
-		},
-	},
 };
 
 export default meta;
