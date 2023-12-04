@@ -9,19 +9,10 @@ import {
 } from './Input.styled';
 import { InputProps } from './Input.types';
 
-export const Input = forwardRef(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
 	(
-		{
-			labelText,
-			colorTypes,
-			isLabel = true,
-			fullWidth = false,
-			sizes = 'md',
-			svgIcon,
-			svgPos = 'left',
-			...props
-		}: InputProps,
-		ref: Ref<HTMLInputElement>
+		{ labelText, colorTypes, isLabel = true, fullWidth = false, sizes = 'md', svgIcon, svgPos = 'left', ...props },
+		ref
 	) => {
 		return (
 			<StyledInputWraaper>
