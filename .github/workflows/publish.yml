@@ -4,20 +4,39 @@ name: 'publish'
 on:  
   push:
     branches: [ master ]
-  release: 
-    types: [published]
+
+
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    permissions: 
+      contents: write
 
     steps:
-      - uses: actions/checkout@v4
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v2
         with:
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn
-      - run: yarn publish
+      - name: Install dependencies
+        run: |
+          npm install -g yarn
+          yarn install
+          yarn set version 4.0.2
+      - name: version up
+        run: |
+          yarn version-patch
+      - name: change package.json push
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add package.json
+          git commit -m 'publish packages with npm'
+          git push origin master
+          yarn publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+          
+        
