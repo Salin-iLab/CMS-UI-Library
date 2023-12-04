@@ -1,4 +1,5 @@
 import { SVGAttributes } from 'react';
+import React from 'react';
 
 export const SearchIcon = ({ color = 'black', ...props }: SVGAttributes<SVGElement>) => {
 	return (

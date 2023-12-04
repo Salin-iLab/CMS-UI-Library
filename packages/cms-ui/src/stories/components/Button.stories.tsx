@@ -20,6 +20,9 @@ export const Default: Story = {
 		onClick: () => alert('clicked'),
 		children: 'SmallButton',
 		size: 'sm',
+		isRounded: false,
+		fullWidth: false,
+		types: 'solid',
 	},
 };
 
