@@ -1,4 +1,4 @@
-import { ChangeEvent, ForwardRefExoticComponent, InputHTMLAttributes, ReactNode } from 'react';
+import { ChangeEvent, ForwardRefExoticComponent, InputHTMLAttributes } from 'react';
 import { ColorThemes } from '../../theme/colors';
 import { RadioGroup } from './';
 
@@ -12,7 +12,6 @@ export interface RadioContextProps {
 	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 	defaultValue?: any;
 	value: any;
-	name: string;
 }
 
 export type RadioStyledWrapperProps = Pick<RadioProps, 'colorTypes'>;

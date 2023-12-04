@@ -18,7 +18,6 @@ export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContex
 	const values: RadioContextProps = {
 		value,
 		onChange,
-		name: props.name,
 	};
 
 	return <RadioProvider value={values}>{children}</RadioProvider>;
@@ -40,7 +39,6 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioProps>(
 						value={value}
 						checked={radioContext?.value !== undefined ? value === radioContext.value : undefined}
 						onChange={radioContext?.onChange}
-						name={radioContext?.name}
 						{...props}
 						ref={ref}
 					/>
