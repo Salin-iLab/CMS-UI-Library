@@ -18,12 +18,16 @@ export const getInputSizes = (
 		case 'md':
 			return css`
 				font-size: 14px;
-				padding: ${svgPos === 'left' ? '10px 8px 10px 48px' : '10px 48px 10px 8px'};
+				padding: ${svgPos === 'left'
+					? `10px 12px 10px ${svgIcon ? '40px' : '12px'}`
+					: `10px ${svgIcon ? '40px' : '12px'} 10px 12px`};
 			`;
 		case 'lg':
 			return css`
 				font-size: 16px;
-				padding: ${svgPos === 'left' ? '12px 10px 12px 48px' : '12px 48px 12px 10px'};
+				padding: ${svgPos === 'left'
+					? `12px 12px 12px ${svgIcon ? '40px' : '12px'}`
+					: `12px ${svgIcon ? '40px' : '12px'} 12px 12px`};
 			`;
 	}
 };
