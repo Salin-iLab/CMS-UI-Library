@@ -9,6 +9,8 @@ export interface RadioProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export interface RadioContextProps {
 	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+	direction?: 'row' | 'column';
+	gap?: number;
 	defaultValue?: any;
 	value: any;
 }
@@ -20,3 +22,5 @@ export type RadioStyledIconProps = Pick<RadioProps, 'checked' | 'colorTypes'>;
 export type RadioStyledBoxProps = Pick<RadioProps, 'colorTypes'>;
 
 export type CompoundedComponent = ForwardRefExoticComponent<RadioProps> & { Group: typeof RadioGroup };
+
+export type RadioStyledGroupProps = Pick<RadioContextProps, 'direction' | 'gap'>;

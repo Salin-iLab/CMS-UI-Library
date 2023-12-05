@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
-import { RadioStyledBoxProps, RadioStyledIconProps, RadioStyledWrapperProps } from './Radio.types';
+import {
+	RadioStyledBoxProps,
+	RadioStyledGroupProps,
+	RadioStyledIconProps,
+	RadioStyledWrapperProps,
+} from './Radio.types';
 import { css } from '@emotion/react';
 import { colors } from '../../theme/colors';
 import { getCheckedRadioColorTypes } from './Radio.utils';
@@ -14,8 +19,6 @@ export const StyledRadioWrapper = styled.label<RadioStyledWrapperProps>`
 	font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif,
 		apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
 	display: inline-flex;
-	margin-inline-start: 0;
-	margin-inline-end: 8px;
 	cursor: pointer;
 	align-items: flex-end;
 
@@ -119,4 +122,11 @@ export const StyledText = styled.span`
 	padding-inline-start: 8px;
 	padding-inline-end: 8px;
 	vertical-align: bottom;
+`;
+
+export const StyledRadioGroup = styled.div<RadioStyledGroupProps>`
+	display: flex;
+	transition: 0.3s;
+	gap: ${props => `${props.gap}px`};
+	flex-direction: ${props => (props.direction === 'column' ? 'column' : 'row')};
 `;
