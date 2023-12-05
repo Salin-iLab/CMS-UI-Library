@@ -18,8 +18,10 @@ export const StyledInputBox = styled.div`
 export const StyledInput = styled.input<InputStyledProps>`
 	appearance: none;
 	background-color: #fff;
+	width: 100%;
 	border: 1px solid ${colors['gray'][300]};
 	border-radius: 4px;
+	box-sizing: border-box;
 	transition: 0.3s;
 	color: ${colors['gray'][700]};
 	outline: none;
