@@ -1,7 +1,8 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Input } from '../../components/Input';
+import React from 'react';
+
 import { SearchIcon } from '../../../assets/SvgIcon/SearchIcon';
+import { Input } from '../../components/Input';
 
 const meta: Meta = {
 	title: 'components/Input',

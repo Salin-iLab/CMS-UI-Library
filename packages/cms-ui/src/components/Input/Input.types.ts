@@ -1,6 +1,7 @@
-import { InputHTMLAttributes } from 'react';
-import { ColorThemes } from '../../theme/colors';
 import { CSSObject } from '@emotion/react';
+import { InputHTMLAttributes } from 'react';
+
+import { ColorThemes } from '../../theme/colors';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	isLabel?: boolean;

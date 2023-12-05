@@ -1,5 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import React from 'react';
+
 import { Spacing } from '../../components/Spacing';
 
 type Story = StoryObj<typeof Spacing>;

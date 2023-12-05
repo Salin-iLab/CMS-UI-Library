@@ -1,7 +1,8 @@
-import styled from '@emotion/styled';
-import { ButtonStyledProps } from './Button.types';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
 import { colors } from '../../theme/colors';
+import { ButtonStyledProps } from './Button.types';
 import { getButtonColorTypes, getButtonSize } from './Button.utils';
 
 export const StyledButton = styled.button<ButtonStyledProps>`

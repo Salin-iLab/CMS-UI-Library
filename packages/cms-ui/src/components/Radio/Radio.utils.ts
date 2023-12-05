@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+
 import { RadioStyledIconProps } from './Radio.types';
 
 export const getCheckedRadioColorTypes = (
