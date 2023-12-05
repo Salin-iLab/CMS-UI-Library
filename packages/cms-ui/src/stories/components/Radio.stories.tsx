@@ -1,8 +1,9 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import React, { ChangeEvent, useState } from 'react';
+
 import { Button } from '../../components/Button/index';
-import { RadioContextProps, RadioProps } from '../../components/Radio/Radio.types';
 import { Radio } from '../../components/Radio/index';
+import { RadioContextProps, RadioProps } from '../../components/Radio/Radio.types';
 
 const meta: Meta = {
 	title: 'components/Radio',

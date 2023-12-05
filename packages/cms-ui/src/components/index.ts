@@ -1,4 +1,5 @@
 export * from './Button';
-export * from './Spacing';
+export * from './CheckBox';
 export * from './Input';
 export * from './Radio';
+export * from './Spacing';

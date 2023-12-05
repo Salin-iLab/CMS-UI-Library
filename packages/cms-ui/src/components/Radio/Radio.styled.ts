@@ -1,12 +1,13 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+
+import { colors } from '../../theme/colors';
 import {
 	RadioStyledBoxProps,
 	RadioStyledGroupProps,
 	RadioStyledIconProps,
 	RadioStyledWrapperProps,
 } from './Radio.types';
-import { css } from '@emotion/react';
-import { colors } from '../../theme/colors';
 import { getCheckedRadioColorTypes } from './Radio.utils';
 
 export const StyledRadioWrapper = styled.label<RadioStyledWrapperProps>`

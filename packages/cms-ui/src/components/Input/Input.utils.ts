@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
-import { InputProps, InputStyledProps } from './Input.types';
+
 import { colors } from '../../theme/colors';
+import { InputProps, InputStyledProps } from './Input.types';
 
 export const getInputSizes = (
 	sizes: InputProps['sizes'],

@@ -1,4 +1,5 @@
-import { PropsWithChildren, forwardRef, useContext, useState } from 'react';
+import { forwardRef, PropsWithChildren, useContext, useState } from 'react';
+
 import { RadioContext, RadioProvider } from './Radio.context';
 import {
 	StyledRadio,
@@ -42,7 +43,7 @@ export const RadioGroup = ({
 };
 
 export const RadioButton = forwardRef<HTMLInputElement, RadioProps>(
-	({ checked, colorTypes = 'blue', value, children, ...props }, ref) => {
+	({ colorTypes = 'blue', value, children, ...props }, ref) => {
 		const radioContext = useContext(RadioContext);
 
 		if (!children) {
