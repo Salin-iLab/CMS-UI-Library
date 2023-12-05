@@ -1,4 +1,4 @@
-import { Ref, forwardRef } from 'react';
+import { forwardRef } from 'react';
 import {
 	StyledInput,
 	StyledInputBox,
