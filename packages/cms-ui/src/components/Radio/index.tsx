@@ -1,12 +1,12 @@
-import { PropsWithChildren, Ref, forwardRef, useContext, useState } from 'react';
+import { PropsWithChildren, forwardRef, useContext, useState } from 'react';
 import { RadioContext, RadioProvider } from './Radio.context';
 import {
 	StyledRadio,
 	StyledRadioBox,
 	StyledRadioGroup,
 	StyledRadioIcon,
+	StyledRadioText,
 	StyledRadioWrapper,
-	StyledText,
 } from './Radio.styled';
 import { CompoundedComponent, RadioContextProps, RadioProps } from './Radio.types';
 
@@ -66,7 +66,7 @@ export const RadioButton = forwardRef<HTMLInputElement, RadioProps>(
 						colorTypes={colorTypes}
 					/>
 				</StyledRadioBox>
-				<StyledText>{children}</StyledText>
+				<StyledRadioText>{children}</StyledRadioText>
 			</StyledRadioWrapper>
 		);
 	}

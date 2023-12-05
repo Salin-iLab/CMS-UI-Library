@@ -115,7 +115,7 @@ export const StyledRadioIcon = styled.span<RadioStyledIconProps>`
 	}
 `;
 
-export const StyledText = styled.span`
+export const StyledRadioText = styled.span`
 	display: inline-flex;
 	font-size: 16px;
 	line-height: 16px;
