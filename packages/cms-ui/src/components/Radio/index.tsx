@@ -1,9 +1,21 @@
 import { PropsWithChildren, Ref, forwardRef, useContext, useState } from 'react';
 import { RadioContext, RadioProvider } from './Radio.context';
-import { StyledRadio, StyledRadioBox, StyledRadioIcon, StyledRadioWrapper, StyledText } from './Radio.styled';
+import {
+	StyledRadio,
+	StyledRadioBox,
+	StyledRadioGroup,
+	StyledRadioIcon,
+	StyledRadioWrapper,
+	StyledText,
+} from './Radio.styled';
 import { CompoundedComponent, RadioContextProps, RadioProps } from './Radio.types';
 
-export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContextProps>) => {
+export const RadioGroup = ({
+	children,
+	direction = 'row',
+	gap = 8,
+	...props
+}: PropsWithChildren<RadioContextProps>) => {
 	const [value, setValue] = useState(props.defaultValue || props.value);
 
 	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +32,13 @@ export const RadioGroup = ({ children, ...props }: PropsWithChildren<RadioContex
 		onChange,
 	};
 
-	return <RadioProvider value={values}>{children}</RadioProvider>;
+	return (
+		<RadioProvider value={values}>
+			<StyledRadioGroup direction={direction} gap={gap}>
+				{children}
+			</StyledRadioGroup>
+		</RadioProvider>
+	);
 };
 
 export const RadioButton = forwardRef<HTMLInputElement, RadioProps>(

@@ -1,7 +1,8 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import React, { ChangeEvent, useState } from 'react';
-import { RadioProps } from '../../components/Radio/Radio.types';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { RadioProps, RadioContextProps } from '../../components/Radio/Radio.types';
 import { Radio } from '../../components/Radio/index';
+import { Button } from '../../components/Button/index';
 
 const meta: Meta = {
 	title: 'components/Radio',
@@ -10,30 +11,47 @@ const meta: Meta = {
 
 type Story = StoryObj<typeof Radio>;
 
+type Direction = RadioContextProps['direction'];
+
 type TemplateTypes = Omit<RadioProps, 'children'>;
 
 const Template: StoryFn<TemplateTypes> = ({ ...args }) => {
-	const [value, setValue] = useState('A');
+	const [gapValue, setGapValue] = useState('8');
+	const [buttonText, setButtonText] = useState<Direction>('row');
 
 	const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setValue(e.target.value);
+		setGapValue(e.target.value);
+	};
+
+	const onClick = () => {
+		setButtonText(buttonText === 'row' ? 'column' : 'row');
 	};
 
 	return (
-		<Radio.Group onChange={onChange} value={value}>
-			<Radio {...args} value={'A'}>
-				A
-			</Radio>
-			<Radio {...args} value={'B'}>
-				B
-			</Radio>
-			<Radio {...args} value={'C'}>
-				C
-			</Radio>
-			<Radio {...args} value={'D'}>
-				D
-			</Radio>
-		</Radio.Group>
+		<>
+			<Radio.Group onChange={onChange} value={gapValue} direction={buttonText} gap={Number(gapValue)}>
+				<Radio {...args} value={'8'}>
+					8px
+				</Radio>
+				<Radio {...args} value={'16'}>
+					16px
+				</Radio>
+				<Radio {...args} value={'24'}>
+					24px
+				</Radio>
+				<Radio {...args} value={'32'}>
+					32px
+				</Radio>
+			</Radio.Group>
+			<Button
+				size="lg"
+				customCSS={{
+					margin: '80px auto 0',
+				}}
+				onClick={onClick}>
+				{buttonText}
+			</Button>
+		</>
 	);
 };
 
