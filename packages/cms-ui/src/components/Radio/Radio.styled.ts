@@ -37,7 +37,6 @@ export const StyledRadioBox = styled.span<RadioStyledBoxProps>`
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-
 	border-radius: 50%;
 
 	&::after {
@@ -71,22 +70,23 @@ export const StyledRadioIcon = styled.span<RadioStyledIconProps>`
 	display: block;
 	width: 16px;
 	height: 16px;
-	background-color: ${props => {
-		if (!props.colorTypes) return '#fff';
-
-		return props.checked ? colors[props.colorTypes][600] : '#fff';
-	}};
-	border-color: ${props => {
-		if (!props.colorTypes) return '#d9d9d9';
-
-		return props.checked ? colors[props.colorTypes][600] : '#d9d9d9';
-	}};
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 50%;
 	transition: all 0.3s;
 	padding: 0;
 	margin: 0;
+
+	background-color: ${props => {
+		if (!props.colorTypes) return null;
+
+		return props.checked ? colors[props.colorTypes][600] : '#fff';
+	}};
+	border-color: ${props => {
+		if (!props.colorTypes) return null;
+
+		return props.checked ? colors[props.colorTypes][600] : colors.gray[300];
+	}};
 
 	&::after {
 		box-sizing: border-box;
