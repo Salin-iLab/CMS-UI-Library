@@ -1,6 +1,7 @@
-import { ReactNode, HTMLAttributes } from 'react';
-import { ColorThemes } from '../../theme/colors';
 import { CSSObject } from '@emotion/react';
+import { HTMLAttributes } from 'react';
+
+import { ColorThemes } from '../../theme/colors';
 
 export interface DropDownItem {
 	value: string;

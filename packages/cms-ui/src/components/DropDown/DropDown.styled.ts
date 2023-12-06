@@ -1,7 +1,8 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
 import { colors } from '../../theme/colors';
-import { DropDownStyledProps, DropDownIconStyledProps } from './DropDown.types';
+import { DropDownIconStyledProps, DropDownStyledProps } from './DropDown.types';
 import { getDropDownColors, getDropDownSizes } from './DropDown.utils';
 
 export const StyledDropDownWrapper = styled.div<DropDownStyledProps>`
