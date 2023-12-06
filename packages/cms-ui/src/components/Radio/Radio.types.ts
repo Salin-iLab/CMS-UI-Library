@@ -22,6 +22,6 @@ export type RadioStyledIconProps = Pick<RadioProps, 'checked' | 'colorTypes'>;
 
 export type RadioStyledBoxProps = Pick<RadioProps, 'colorTypes'>;
 
-export type CompoundedComponent = ForwardRefExoticComponent<RadioProps> & { Group: typeof RadioGroup };
-
 export type RadioStyledGroupProps = Pick<RadioContextProps, 'direction' | 'gap'>;
+
+export type CompoundedComponent = ForwardRefExoticComponent<RadioProps> & { Group: typeof RadioGroup };
