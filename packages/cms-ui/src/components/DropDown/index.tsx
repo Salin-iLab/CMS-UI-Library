@@ -1,12 +1,13 @@
-import { useState, Ref, forwardRef } from 'react';
+import { forwardRef, Ref, useState } from 'react';
+
 import {
-	StyledDropDownWrapper,
-	StyledDropDownLabel,
 	StyledDropDownIcon,
-	StyledDropDownList,
 	StyledDropDownItem,
+	StyledDropDownLabel,
+	StyledDropDownList,
+	StyledDropDownWrapper,
 } from './DropDown.styled';
-import { DropDownProps, DropDownItem } from './DropDown.types';
+import { DropDownItem, DropDownProps } from './DropDown.types';
 
 export const DropDown = forwardRef(
 	({ list, isIcon, colorTypes, size, customCSS, mainLabel }: DropDownProps, ref: Ref<HTMLDivElement>) => {
