@@ -2,6 +2,11 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+    },
     "outDir": "./dist",
     "target": "ES2020",
     "useDefineForClassFields": true,
