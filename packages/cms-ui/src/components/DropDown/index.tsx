@@ -4,6 +4,7 @@ import {
 	StyledDropDownIcon,
 	StyledDropDownItem,
 	StyledDropDownLabel,
+	StyledDropDownLabelWrapper,
 	StyledDropDownList,
 	StyledDropDownWrapper,
 } from './DropDown.styled';
@@ -36,10 +37,12 @@ export const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
 
 		return (
 			<StyledDropDownWrapper colorTypes={colorTypes} size={size} customCSS={customCSS}>
-				<StyledDropDownLabel onClick={() => setIsOpen(!isOpen)} ref={ref} {...props}>
-					{mainLabel}
-				</StyledDropDownLabel>
-				{isIcon && <StyledDropDownIcon isOpen={isOpen}>▶</StyledDropDownIcon>}
+				<StyledDropDownLabelWrapper>
+					<StyledDropDownLabel onClick={() => setIsOpen(!isOpen)} ref={ref} {...props}>
+						{mainLabel}
+					</StyledDropDownLabel>
+					{isIcon && <StyledDropDownIcon isOpen={isOpen}>▶</StyledDropDownIcon>}
+				</StyledDropDownLabelWrapper>
 				{isOpen && renderOptions(list)}
 			</StyledDropDownWrapper>
 		);
