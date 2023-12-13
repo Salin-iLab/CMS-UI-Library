@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { colors } from '../../theme/colors';
-import { DropDownIconStyledProps, DropDownStyledProps } from './DropDown.types';
+import { DropDownIconStyledProps, DropDownStyledLabelProps, DropDownStyledProps } from './DropDown.types';
 import { getDropDownColors, getDropDownSizes } from './DropDown.utils';
 
 export const StyledDropDownWrapper = styled.div<DropDownStyledProps>`
@@ -10,17 +10,22 @@ export const StyledDropDownWrapper = styled.div<DropDownStyledProps>`
 	${props => {
 		return css`
 			${getDropDownSizes(props.size)}
-			${getDropDownColors(props.colorTypes)}
 			${props.customCSS}
 		`;
 	}}
 `;
 
-export const StyledDropDownLabel = styled.div`
+export const StyledDropDownLabel = styled.div<DropDownStyledLabelProps>`
 	display: flex;
 	align-items: center;
 	padding: 8px;
 	cursor: pointer;
+
+	${props => {
+		return css`
+			${getDropDownColors(props.colorTypes)}
+		`;
+	}}
 `;
 
 export const StyledDropDownIcon = styled.div<DropDownIconStyledProps>`

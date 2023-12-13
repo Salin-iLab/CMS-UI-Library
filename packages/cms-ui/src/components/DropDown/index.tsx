@@ -1,4 +1,4 @@
-import { forwardRef, Ref, useState } from 'react';
+import { forwardRef, useState } from 'react';
 
 import {
 	StyledDropDownIcon,
@@ -9,8 +9,8 @@ import {
 } from './DropDown.styled';
 import { DropDownItem, DropDownProps } from './DropDown.types';
 
-export const DropDown = forwardRef(
-	({ list, isIcon, colorTypes, size, customCSS, mainLabel }: DropDownProps, ref: Ref<HTMLDivElement>) => {
+export const DropDown = forwardRef<HTMLDivElement, DropDownProps>(
+	({ list, isIcon, colorTypes, size, customCSS, mainLabel, ...props }, ref) => {
 		const [isOpen, setIsOpen] = useState<boolean>(false);
 
 		const handleItemClick = (item: DropDownItem) => {
@@ -36,7 +36,9 @@ export const DropDown = forwardRef(
 
 		return (
 			<StyledDropDownWrapper colorTypes={colorTypes} size={size} customCSS={customCSS}>
-				<StyledDropDownLabel onClick={() => setIsOpen(!isOpen)}>{mainLabel}</StyledDropDownLabel>
+				<StyledDropDownLabel onClick={() => setIsOpen(!isOpen)} ref={ref} {...props}>
+					{mainLabel}
+				</StyledDropDownLabel>
 				{isIcon && <StyledDropDownIcon isOpen={isOpen}>▶</StyledDropDownIcon>}
 				{isOpen && renderOptions(list)}
 			</StyledDropDownWrapper>
