@@ -18,6 +18,8 @@ export interface DropDownProps extends HTMLAttributes<HTMLDivElement> {
 
 export type DropDownStyledProps = Pick<DropDownProps, 'size' | 'colorTypes' | 'customCSS'>;
 
+export type DropDownStyledLabelProps = Pick<DropDownProps, 'colorTypes' | 'customCSS'>;
+
 export type DropDownIconStyledProps = {
 	isOpen: boolean;
 };
