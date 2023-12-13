@@ -10,6 +10,7 @@ export const StyledDropDownWrapper = styled.div<DropDownStyledProps>`
 	${props => {
 		return css`
 			${getDropDownSizes(props.size)}
+			${getDropDownColors(props.colorTypes)}
 			${props.customCSS}
 		`;
 	}}
@@ -20,12 +21,6 @@ export const StyledDropDownLabel = styled.div<DropDownStyledLabelProps>`
 	align-items: center;
 	padding: 8px;
 	cursor: pointer;
-
-	${props => {
-		return css`
-			${getDropDownColors(props.colorTypes)}
-		`;
-	}}
 `;
 
 export const StyledDropDownIcon = styled.div<DropDownIconStyledProps>`

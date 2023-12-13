@@ -25,9 +25,5 @@ export const getDropDownColors = (color: DropDownStyledProps['colorTypes']) => {
 
 	return css`
 		color: ${colors[color][500]};
-
-		&:hover {
-			color: ${colors[color][100]};
-		}
 	`;
 };
