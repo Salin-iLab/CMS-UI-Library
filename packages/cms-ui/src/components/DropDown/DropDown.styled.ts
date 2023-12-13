@@ -13,7 +13,12 @@ export const StyledDropDownWrapper = styled.div<DropDownStyledProps>`
 			${getDropDownColors(props.colorTypes)}
 			${props.customCSS}
 		`;
-	}}
+	}};
+`;
+
+export const StyledDropDownLabelWrapper = styled.div`
+	display: flex;
+	align-items: center;
 `;
 
 export const StyledDropDownLabel = styled.div<DropDownStyledLabelProps>`
