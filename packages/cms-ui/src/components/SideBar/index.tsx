@@ -1,5 +1,6 @@
-import { forwardRef, MouseEvent, useState } from 'react';
+import { forwardRef, MouseEvent, useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
 
 import {
 	StyledSideBarIcon,
@@ -13,9 +14,12 @@ import { SideBarMenuitemProps, SideBarProps } from './SideBar.types';
 export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 	({ menu, colorTypes = 'blue', ...props }, ref) => {
 		const nav = useNavigate();
-		const location = useLocation();
+		const { pathname } = useLocation();
 		const [isOpen, setIsOpen] = useState(false);
+		const nodeRef = useRef(null);
 		const { icon, name, path, children } = menu;
+		const isPath = path === pathname;
+		const isChildrenPath = children?.some(child => child.path === pathname);
 
 		const onClick = (e: MouseEvent<HTMLLIElement>) => {
 			if (path) {
@@ -31,29 +35,40 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 			}
 		};
 
-		console.log(location);
+		useEffect(() => {
+			if (isChildrenPath) {
+				setIsOpen(true);
+			}
+		}, [isChildrenPath]);
 
 		return (
 			<>
 				<StyledSideBarMenuItemWrapper
 					onClick={e => onClick(e)}
 					colorTypes={colorTypes}
+					isPath={isPath}
 					isOpen={isOpen}
 					{...props}
 					ref={ref}>
-					<StyledSideBarIcon colorTypes={colorTypes} isOpen={isOpen}>
+					<StyledSideBarIcon colorTypes={colorTypes} isPath={isPath} isOpen={isOpen}>
 						{icon}
 					</StyledSideBarIcon>
 					<StyledSideBarTitle>{name}</StyledSideBarTitle>
-					<i>test</i>
 				</StyledSideBarMenuItemWrapper>
-				{isOpen && (
-					<StyledSideBarList>
-						{children?.map(menu => (
-							<SideBarMenuItem menu={menu} key={menu.name} />
-						))}
-					</StyledSideBarList>
-				)}
+
+				<Transition in={isOpen} nodeRef={nodeRef} timeout={200} mountOnEnter unmountOnExit>
+					{state => (
+						<StyledSideBarList className={`sub-list ${state}`} isOpen={isOpen} ref={nodeRef}>
+							{children?.map((menu, idx) => {
+								const isSelect = menu.path === pathname;
+
+								return (
+									<SideBarMenuItem className="sub-item" menu={menu} key={`${menu.name}-${idx}`} isSelect={isSelect} />
+								);
+							})}
+						</StyledSideBarList>
+					)}
+				</Transition>
 			</>
 		);
 	}
