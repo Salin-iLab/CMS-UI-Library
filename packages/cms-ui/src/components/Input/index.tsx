@@ -12,7 +12,16 @@ import { InputProps } from './Input.types';
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
 	(
-		{ labelText, colorTypes, isLabel = true, fullWidth = false, sizes = 'md', svgIcon, svgPos = 'left', ...props },
+		{
+			labelText,
+			colorTypes = 'blue',
+			isLabel = true,
+			fullWidth = false,
+			sizes = 'md',
+			svgIcon,
+			svgPos = 'left',
+			...props
+		},
 		ref
 	) => {
 		return (

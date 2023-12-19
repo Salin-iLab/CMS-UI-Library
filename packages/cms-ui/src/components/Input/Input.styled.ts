@@ -40,6 +40,10 @@ export const StyledInput = styled.input<InputStyledProps>`
 			`;
 		}}
 	}
+
+	&::placeholder {
+		color: ${colors['gray'][300]};
+	}
 `;
 
 export const StyledInputLabel = styled.label<InputStyledLabelProps>`
