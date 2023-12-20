@@ -20,6 +20,7 @@ export const Default: Story = {
 		sizes: 'md',
 		svgIcon: <SearchIcon width={16} height={16} />,
 		svgPos: 'left',
+		placeholder: 'placeholder',
 	},
 	argTypes: {
 		svgIcon: {

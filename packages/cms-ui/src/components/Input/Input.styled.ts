@@ -30,6 +30,7 @@ export const StyledInput = styled.input<InputStyledProps>`
 	${props => {
 		return css`
 			${getInputSizes(props.sizes, props.svgPos, props.svgIcon)}
+			${props.customCSS}
 		`;
 	}}
 
