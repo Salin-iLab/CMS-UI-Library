@@ -5,6 +5,7 @@ import { Transition } from 'react-transition-group';
 import {
 	StyledSideBarIcon,
 	StyledSideBarList,
+	StyledSideBarMenuItemBox,
 	StyledSideBarMenuItemWrapper,
 	StyledSideBarTitle,
 	StyledSideBarWrapper,
@@ -43,19 +44,14 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 
 		return (
 			<>
-				<StyledSideBarMenuItemWrapper
-					onClick={e => onClick(e)}
-					colorTypes={colorTypes}
-					isPath={isPath}
-					isOpen={isOpen}
-					{...props}
-					ref={ref}>
-					<StyledSideBarIcon colorTypes={colorTypes} isPath={isPath} isOpen={isOpen}>
-						{icon}
-					</StyledSideBarIcon>
-					<StyledSideBarTitle>{name}</StyledSideBarTitle>
+				<StyledSideBarMenuItemWrapper onClick={e => onClick(e)} {...props} ref={ref}>
+					<StyledSideBarMenuItemBox colorTypes={colorTypes} isPath={isPath}>
+						<StyledSideBarIcon colorTypes={colorTypes} isPath={isPath} isOpen={isOpen}>
+							{icon}
+						</StyledSideBarIcon>
+						<StyledSideBarTitle>{name}</StyledSideBarTitle>
+					</StyledSideBarMenuItemBox>
 				</StyledSideBarMenuItemWrapper>
-
 				<Transition in={isOpen} nodeRef={nodeRef} timeout={200} mountOnEnter unmountOnExit>
 					{state => (
 						<StyledSideBarList className={`sub-list ${state}`} isOpen={isOpen} ref={nodeRef}>
