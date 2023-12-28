@@ -22,7 +22,7 @@ export interface SideBarMenuitemProps extends HTMLAttributes<HTMLLIElement> {
 	isOpen?: boolean;
 }
 
-export type SideBarSubListSTyledProps = Pick<SideBarMenuitemProps, 'isOpen'>;
+export type SideBarSubListStyledProps = Pick<SideBarMenuitemProps, 'isOpen'>;
 
 export type SideBarMenuItemStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen' | 'isSelect' | 'isPath'>;
 
