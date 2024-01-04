@@ -20,6 +20,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			sizes = 'md',
 			svgIcon,
 			svgPos = 'left',
+			customCSS,
 			...props
 		},
 		ref
@@ -29,7 +30,15 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 				<StyledInputLabel fullWidth={fullWidth} sizes={sizes} colorTypes={colorTypes}>
 					{isLabel && <StyledInputLabelText sizes={sizes}>{labelText}</StyledInputLabelText>}
 					<StyledInputBox>
-						<StyledInput sizes={sizes} colorTypes={colorTypes} svgPos={svgPos} svgIcon={svgIcon} ref={ref} {...props} />
+						<StyledInput
+							sizes={sizes}
+							ref={ref}
+							customCSS={customCSS}
+							{...props}
+							colorTypes={colorTypes}
+							svgPos={svgPos}
+							svgIcon={svgIcon}
+						/>
 						{svgIcon && <StyledInputIcon svgPos={svgPos}>{svgIcon}</StyledInputIcon>}
 					</StyledInputBox>
 				</StyledInputLabel>
