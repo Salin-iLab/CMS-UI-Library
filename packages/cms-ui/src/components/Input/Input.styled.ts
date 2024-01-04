@@ -30,7 +30,6 @@ export const StyledInput = styled.input<InputStyledProps>`
 	${props => {
 		return css`
 			${getInputSizes(props.sizes, props.svgPos, props.svgIcon)}
-			${props.customCSS}
 		`;
 	}}
 
@@ -45,6 +44,12 @@ export const StyledInput = styled.input<InputStyledProps>`
 	&::placeholder {
 		color: ${colors['gray'][300]};
 	}
+
+	${props => {
+		return css`
+			${props.customCSS}
+		`;
+	}}
 `;
 
 export const StyledInputLabel = styled.label<InputStyledLabelProps>`
