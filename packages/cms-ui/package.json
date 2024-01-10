@@ -3,7 +3,7 @@
   "sideEffects": false,
   "packageManager": "yarn@4.0.1",
   "description": "Salin CMS UI",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
