@@ -10,7 +10,7 @@
   "scripts": {
     "typecheck": "lerna run typecheck",
     "build": "lerna run build --scope @salin/cms-ui && yarn typecheck",
-    "publish": "lerna version --no-git-tag-version --conventional-prerelease --yes git add -u . && lerna publish from-package --pre-dist-tag next",
+    "publish": "lerna version && lerna publish from-package",
     "version-patch": "lerna version patch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
