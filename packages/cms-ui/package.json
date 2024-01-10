@@ -55,7 +55,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "gitHead": "7449e36efb97e49539fb187dfae29a9dfc532d85",
+  "gitHead": "197cb5728979f8b5b977ad9eafad85329488c183",
   "dependencies": {
     "react-transition-group": "^4.4.5"
   }
