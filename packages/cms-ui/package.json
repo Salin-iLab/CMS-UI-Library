@@ -54,7 +54,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "612557df8af33c2c141b1126184f9b86bd59e033",
+  "gitHead": "ec18e9985d8640ac2b1f7fc029fc68b8c9bd5185",
   "dependencies": {
     "react-transition-group": "^4.4.5"
   }
