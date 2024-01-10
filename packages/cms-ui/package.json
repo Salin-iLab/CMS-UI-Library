@@ -52,9 +52,10 @@
     "react-router-dom": ">=6.0.0"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "gitHead": "ec18e9985d8640ac2b1f7fc029fc68b8c9bd5185",
+  "gitHead": "54ed8433b5ea61166081d7004ffd1e03b3d3241f",
   "dependencies": {
     "react-transition-group": "^4.4.5"
   }
