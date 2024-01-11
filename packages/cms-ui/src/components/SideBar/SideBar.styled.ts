@@ -3,39 +3,33 @@ import styled from '@emotion/styled';
 
 import {
 	SideBarIconStyledProps,
-	SideBarLogoJsxStyledProps,
 	SideBarMenuItemStyledProps,
 	SideBarSubListStyledProps,
 	SideBarWrapperStyledProps,
 } from '../SideBar/SideBar.types';
 import { colors } from './../../theme/colors';
 
-const SideBarSubListOpenAnimation = keyframes`
+export const SideBarSubListOpenAnimation = keyframes`
 	from {
 		opacity: 0;
 		max-height: 0;
-
 	}
 
 	to {
 		opacity: 1;
 		max-height: 500px;
-
 	}
 `;
 
-const SideBarSubListCloseAnimation = keyframes`
+export const SideBarSubListCloseAnimation = keyframes`
 	from {
 		opacity: 1;
 		max-height: 500px;
-
-
 	}
 
 	to {
 		opacity: 0;
 		max-height: 0;
-
 	}
 `;
 
@@ -127,11 +121,3 @@ export const StyledSideBarMenuItemBox = styled.div<SideBarMenuItemStyledProps>`
 export const StyledSideBarTitle = styled.span``;
 
 export const StyledArrow = styled.i``;
-
-export const StyledSideBarLogoBox = styled.div<SideBarLogoJsxStyledProps>`
-	display: flex;
-	padding: 0 16px;
-	align-items: center;
-	justify-content: center;
-	flex-direction: ${prosp => (prosp.logoJsx ? 'column' : 'row')};
-`;
