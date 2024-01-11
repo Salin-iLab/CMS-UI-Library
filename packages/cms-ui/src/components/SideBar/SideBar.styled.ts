@@ -3,8 +3,10 @@ import styled from '@emotion/styled';
 
 import {
 	SideBarIconStyledProps,
+	SideBarLogoJsxStyledProps,
 	SideBarMenuItemStyledProps,
 	SideBarSubListStyledProps,
+	SideBarWrapperStyledProps,
 } from '../SideBar/SideBar.types';
 import { colors } from './../../theme/colors';
 
@@ -37,12 +39,17 @@ const SideBarSubListCloseAnimation = keyframes`
 	}
 `;
 
-export const StyledSideBarWrapper = styled.div`
+export const StyledSideBarWrapper = styled.div<SideBarWrapperStyledProps>`
 	width: 100%;
 	max-width: 256px;
-	min-height: 100vh;
 	border-inline-end: 2px solid ${colors.gray[200]};
 	box-sizing: border-box;
+
+	${props => {
+		return css`
+			${props.customCSS}
+		`;
+	}}
 `;
 
 export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
@@ -120,3 +127,11 @@ export const StyledSideBarMenuItemBox = styled.div<SideBarMenuItemStyledProps>`
 export const StyledSideBarTitle = styled.span``;
 
 export const StyledArrow = styled.i``;
+
+export const StyledSideBarLogoBox = styled.div<SideBarLogoJsxStyledProps>`
+	display: flex;
+	padding: 0 16px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: ${prosp => (prosp.logoJsx ? 'column' : 'row')};
+`;

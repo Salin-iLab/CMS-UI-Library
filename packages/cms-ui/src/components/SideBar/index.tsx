@@ -5,6 +5,7 @@ import { Transition } from 'react-transition-group';
 import {
 	StyledSideBarIcon,
 	StyledSideBarList,
+	StyledSideBarLogoBox,
 	StyledSideBarMenuItemBox,
 	StyledSideBarMenuItemWrapper,
 	StyledSideBarTitle,
@@ -70,9 +71,10 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 	}
 );
 
-export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(({ menuList, ...props }, ref) => {
+export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(({ menuList, logoJsx, customCSS, ...props }, ref) => {
 	return (
-		<StyledSideBarWrapper>
+		<StyledSideBarWrapper customCSS={customCSS}>
+			<StyledSideBarLogoBox logoJsx={logoJsx}>{logoJsx}</StyledSideBarLogoBox>
 			<StyledSideBarList {...props} ref={ref}>
 				{menuList.map(menu => (
 					<SideBarMenuItem menu={menu} key={menu.name} />
