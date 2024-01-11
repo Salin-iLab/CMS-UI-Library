@@ -75,8 +75,8 @@ export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(({ menuList, l
 		<StyledSideBarWrapper customCSS={customCSS}>
 			{logoJsx}
 			<StyledSideBarList {...props} ref={ref}>
-				{menuList.map(menu => (
-					<SideBarMenuItem menu={menu} key={menu.name} />
+				{menuList.map((menu, idx) => (
+					<SideBarMenuItem menu={menu} key={`${menu.name}-${idx}`} />
 				))}
 			</StyledSideBarList>
 		</StyledSideBarWrapper>
