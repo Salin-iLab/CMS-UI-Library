@@ -59,7 +59,13 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 								const isSelect = menu.path === pathname;
 
 								return (
-									<SideBarMenuItem className="sub-item" menu={menu} key={`${menu.name}-${idx}`} isSelect={isSelect} />
+									<SideBarMenuItem
+										className="sub-item"
+										menu={menu}
+										key={`${menu.name}-${idx}`}
+										colorTypes={colorTypes}
+										isSelect={isSelect}
+									/>
 								);
 							})}
 						</StyledSideBarList>
@@ -70,15 +76,17 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 	}
 );
 
-export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(({ menuList, logoJsx, customCSS, ...props }, ref) => {
-	return (
-		<StyledSideBarWrapper customCSS={customCSS}>
-			{logoJsx}
-			<StyledSideBarList {...props} ref={ref}>
-				{menuList.map((menu, idx) => (
-					<SideBarMenuItem menu={menu} key={`${menu.name}-${idx}`} />
-				))}
-			</StyledSideBarList>
-		</StyledSideBarWrapper>
-	);
-});
+export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(
+	({ menuList, logoJsx, customCSS, colorTypes = 'blue', ...props }, ref) => {
+		return (
+			<StyledSideBarWrapper customCSS={customCSS}>
+				{logoJsx}
+				<StyledSideBarList {...props} ref={ref}>
+					{menuList.map((menu, idx) => (
+						<SideBarMenuItem menu={menu} colorTypes={colorTypes} key={`${menu.name}-${idx}`} />
+					))}
+				</StyledSideBarList>
+			</StyledSideBarWrapper>
+		);
+	}
+);

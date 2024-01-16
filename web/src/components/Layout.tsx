@@ -5,23 +5,27 @@ import { SideBar } from '../../../packages/cms-ui/src/components/SideBar/index';
 
 const DUMMY: SideBarMenuitemTypes[] = [
 	{ name: 'Navigation One', icon: <SearchIcon />, path: '/' },
-	{ name: 'Navigation Twe', icon: <SearchIcon />, path: '/test' },
 	{
 		name: 'Navigation Three',
 		icon: <SearchIcon />,
 		children: [
-			{ name: 'Navigation 3-1', icon: <SearchIcon />, path: '/test' },
-			{ name: 'Navigation 3-2', icon: <SearchIcon />, path: '/test' },
+			{ name: 'Navigation 3-1', icon: <SearchIcon />, path: '/test2' },
+			{ name: 'Navigation 3-2', icon: <SearchIcon />, path: '/test3' },
 		],
 	},
+	{ name: 'Navigation Twe', icon: <SearchIcon />, path: '/test' },
 ];
 
 const Layout = () => {
 	return (
-		<>
-			<SideBar menuList={DUMMY} />
+		<div
+			style={{
+				display: 'flex',
+				flexDirection: 'row',
+			}}>
+			<SideBar menuList={DUMMY} colorTypes="red" />
 			<Outlet />
-		</>
+		</div>
 	);
 };
 

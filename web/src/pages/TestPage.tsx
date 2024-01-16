@@ -7,12 +7,7 @@ const list = [
 ];
 
 const TestPage = () => {
-	return (
-		<div>
-			TestPage
-			<DropDown list={list} colorTypes="blue" size="md" mainLabel="DropDown List" isIcon={true} />
-		</div>
-	);
+	return <div>TestPage</div>;
 };
 
 export default TestPage;
