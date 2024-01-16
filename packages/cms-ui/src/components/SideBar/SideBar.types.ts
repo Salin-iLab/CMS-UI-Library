@@ -34,3 +34,5 @@ export type SideBarSubListStyledProps = Pick<SideBarMenuitemProps, 'isOpen'>;
 export type SideBarMenuItemStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen' | 'isSelect' | 'isPath'>;
 
 export type SideBarIconStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen' | 'isSelect' | 'isPath'>;
+
+export type SideBarArrowStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen'>;

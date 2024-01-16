@@ -2,6 +2,7 @@ import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import {
+	SideBarArrowStyledProps,
 	SideBarIconStyledProps,
 	SideBarMenuItemStyledProps,
 	SideBarSubListStyledProps,
@@ -50,7 +51,7 @@ export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	transition: all 0.2;
+	/* transition: all 0.2; */
 
 	&.sub-list {
 		background-color: ${colors.gray[100]};
@@ -72,6 +73,7 @@ export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
 export const StyledSideBarMenuItemWrapper = styled.li`
 	transition: all 0.2;
 	box-sizing: border-box;
+	cursor: pointer;
 
 	&.sub-item > div {
 		padding: 0 16px 0 30px;
@@ -118,6 +120,32 @@ export const StyledSideBarMenuItemBox = styled.div<SideBarMenuItemStyledProps>`
 	}}
 `;
 
-export const StyledSideBarTitle = styled.span``;
+export const StyledSideBarTitle = styled.span`
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex: 1;
+	perspective: 100px;
+`;
 
-export const StyledArrow = styled.i``;
+export const StyledArrow = styled.i<SideBarArrowStyledProps>`
+	width: 12px;
+
+	&::before {
+		content: '';
+		width: 6px;
+		height: 6px;
+		position: absolute;
+		top: 50%;
+		border-bottom: 2px solid #121212;
+		border-right: 2px solid #121212;
+		display: inline-block;
+		transition: 0.2s all ease-in-out;
+		transform: ${props => {
+			return props.isOpen
+				? 'translateY(-25%) rotateX(180deg) rotateZ(45deg)'
+				: 'translateY(-50%) rotateX(0deg) rotateZ(45deg)';
+		}};
+	}
+`;

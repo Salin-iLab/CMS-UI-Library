@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 
 import {
+	StyledArrow,
 	StyledSideBarIcon,
 	StyledSideBarList,
 	StyledSideBarMenuItemBox,
@@ -49,7 +50,9 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 						<StyledSideBarIcon colorTypes={colorTypes} isPath={isPath} isOpen={isOpen}>
 							{icon}
 						</StyledSideBarIcon>
-						<StyledSideBarTitle>{name}</StyledSideBarTitle>
+						<StyledSideBarTitle>
+							{name} {children && <StyledArrow colorTypes={colorTypes} isOpen={isOpen} />}
+						</StyledSideBarTitle>
 					</StyledSideBarMenuItemBox>
 				</StyledSideBarMenuItemWrapper>
 				<Transition in={isOpen} nodeRef={nodeRef} timeout={200} mountOnEnter unmountOnExit>
