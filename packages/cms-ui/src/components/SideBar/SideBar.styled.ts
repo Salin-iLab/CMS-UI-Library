@@ -52,18 +52,13 @@ export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	/* transition: all 0.2; */
 
 	:not(&.sub-list) {
 		overflow: auto;
 	}
 
 	&.sub-list {
-		background-color: ${props => {
-			console.log(props.deps);
-
-			return colors.gray[`${props.deps}00`];
-		}};
+		background-color: ${props => colors.gray[props.deps * 100]};
 
 		animation: ${props =>
 			props.isOpen

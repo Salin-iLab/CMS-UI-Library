@@ -1,6 +1,36 @@
 // tailwind color palette v3.3.5
 
-export const colors = {
+interface Colors {
+	gray: {
+		[key: number]: string;
+	};
+	red: {
+		[key: number]: string;
+	};
+	orange: {
+		[key: number]: string;
+	};
+	yellow: {
+		[key: number]: string;
+	};
+	green: {
+		[key: number]: string;
+	};
+	cyan: {
+		[key: number]: string;
+	};
+	blue: {
+		[key: number]: string;
+	};
+	purple: {
+		[key: number]: string;
+	};
+	pink: {
+		[key: number]: string;
+	};
+}
+
+export const colors: Colors = {
 	gray: {
 		50: '#f9fafb',
 		100: '#f3f4f6',
