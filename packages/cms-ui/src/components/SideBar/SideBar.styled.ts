@@ -79,6 +79,12 @@ export const StyledSideBarMenuItemWrapper = styled.li<SideBarMenuItemWrapperStyl
 	box-sizing: border-box;
 	cursor: pointer;
 
+	& > div {
+		&:hover {
+			background-color: ${props => colors.gray[props.deps * 100 + 100]};
+		}
+	}
+
 	&.sub-item > div {
 		padding: ${props => `0 16px 0 ${16 + 14 * props.deps}px`};
 	}
@@ -105,10 +111,6 @@ export const StyledSideBarMenuItemBox = styled.div<SideBarMenuItemStyledProps>`
 	box-sizing: border-box;
 	border-radius: 8px;
 	gap: 8px;
-
-	&:hover {
-		background-color: ${colors.gray[200]};
-	}
 
 	${props => {
 		if (!props.colorTypes) return null;
