@@ -14,7 +14,7 @@ import {
 import { SideBarMenuitemProps, SideBarProps } from './SideBar.types';
 
 export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
-	({ menu, colorTypes = 'blue', ...props }, ref) => {
+	({ menu, colorTypes = 'blue', deps, ...props }, ref) => {
 		const nav = useNavigate();
 		const { pathname } = useLocation();
 		const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,7 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 
 		return (
 			<>
-				<StyledSideBarMenuItemWrapper onClick={e => onClick(e)} {...props} ref={ref}>
+				<StyledSideBarMenuItemWrapper onClick={e => onClick(e)} {...props} ref={ref} deps={deps}>
 					<StyledSideBarMenuItemBox colorTypes={colorTypes} isPath={isPath}>
 						<StyledSideBarIcon colorTypes={colorTypes} isPath={isPath} isOpen={isOpen}>
 							{icon}
@@ -57,7 +57,7 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 				</StyledSideBarMenuItemWrapper>
 				<Transition in={isOpen} nodeRef={nodeRef} timeout={200} mountOnEnter unmountOnExit>
 					{state => (
-						<StyledSideBarList className={`sub-list ${state}`} isOpen={isOpen} ref={nodeRef}>
+						<StyledSideBarList className={`sub-list ${state}`} isOpen={isOpen} ref={nodeRef} deps={deps + 1}>
 							{children?.map((menu, idx) => {
 								const isSelect = menu.path === pathname;
 
@@ -68,6 +68,7 @@ export const SideBarMenuItem = forwardRef<HTMLLIElement, SideBarMenuitemProps>(
 										key={`${menu.name}-${idx}`}
 										colorTypes={colorTypes}
 										isSelect={isSelect}
+										deps={deps + 1}
 									/>
 								);
 							})}
@@ -84,9 +85,9 @@ export const SideBar = forwardRef<HTMLUListElement, SideBarProps>(
 		return (
 			<StyledSideBarWrapper customCSS={customCSS}>
 				{logoJsx}
-				<StyledSideBarList {...props} ref={ref}>
+				<StyledSideBarList {...props} ref={ref} deps={0}>
 					{menuList.map((menu, idx) => (
-						<SideBarMenuItem menu={menu} colorTypes={colorTypes} key={`${menu.name}-${idx}`} />
+						<SideBarMenuItem menu={menu} colorTypes={colorTypes} key={`${menu.name}-${idx}`} deps={0} />
 					))}
 				</StyledSideBarList>
 			</StyledSideBarWrapper>

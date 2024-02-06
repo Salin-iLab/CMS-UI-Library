@@ -23,16 +23,19 @@ export interface SideBarMenuitemProps extends HTMLAttributes<HTMLLIElement> {
 	isSelect?: boolean;
 	isPath?: boolean;
 	isOpen?: boolean;
+	deps: number;
 }
 
 export type SideBarWrapperStyledProps = Pick<SideBarProps, 'customCSS'>;
 
 export type SideBarLogoJsxStyledProps = Pick<SideBarProps, 'logoJsx'>;
 
-export type SideBarSubListStyledProps = Pick<SideBarMenuitemProps, 'isOpen'>;
+export type SideBarSubListStyledProps = Pick<SideBarMenuitemProps, 'isOpen' | 'deps'>;
 
 export type SideBarMenuItemStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen' | 'isSelect' | 'isPath'>;
 
 export type SideBarIconStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen' | 'isSelect' | 'isPath'>;
 
 export type SideBarArrowStyledProps = Pick<SideBarMenuitemProps, 'colorTypes' | 'isOpen'>;
+
+export type SideBarMenuItemWrapperStyledProps = Pick<SideBarMenuitemProps, 'deps'>;

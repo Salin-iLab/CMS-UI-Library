@@ -5,6 +5,7 @@ import {
 	SideBarArrowStyledProps,
 	SideBarIconStyledProps,
 	SideBarMenuItemStyledProps,
+	SideBarMenuItemWrapperStyledProps,
 	SideBarSubListStyledProps,
 	SideBarWrapperStyledProps,
 } from '../SideBar/SideBar.types';
@@ -53,8 +54,16 @@ export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
 	margin: 0;
 	/* transition: all 0.2; */
 
+	:not(&.sub-list) {
+		overflow: auto;
+	}
+
 	&.sub-list {
-		background-color: ${colors.gray[100]};
+		background-color: ${props => {
+			console.log(props.deps);
+
+			return colors.gray[`${props.deps}00`];
+		}};
 
 		animation: ${props =>
 			props.isOpen
@@ -70,13 +79,13 @@ export const StyledSideBarList = styled.ul<SideBarSubListStyledProps>`
 	}
 `;
 
-export const StyledSideBarMenuItemWrapper = styled.li`
+export const StyledSideBarMenuItemWrapper = styled.li<SideBarMenuItemWrapperStyledProps>`
 	transition: all 0.2;
 	box-sizing: border-box;
 	cursor: pointer;
 
 	&.sub-item > div {
-		padding: 0 16px 0 30px;
+		padding: ${props => `0 16px 0 ${16 + 14 * props.deps}px`};
 	}
 `;
 
