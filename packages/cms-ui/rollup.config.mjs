@@ -1,9 +1,10 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
-import commonjs from '@rollup/plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+
 import pkg from './package.json' assert { type: 'json' };
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
@@ -22,7 +23,7 @@ export default {
 			format: 'esm',
 		},
 	],
-	external: ['react', 'react-dom'],
+	external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
 	plugins: [
 		peerDepsExternal(),
 		nodeResolve({

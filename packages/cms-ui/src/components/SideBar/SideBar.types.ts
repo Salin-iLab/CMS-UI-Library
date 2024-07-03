@@ -7,6 +7,7 @@ export interface SideBarMenuitemTypes {
 	name: string;
 	path?: string;
 	icon?: JSX.Element;
+	permissions?: string | boolean;
 	children?: SideBarMenuitemTypes[];
 }
 
