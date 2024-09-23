@@ -22,6 +22,9 @@ interface Colors {
 	blue: {
 		[key: number]: string;
 	};
+	blue2: {
+		[key: number]: string;
+	};
 	purple: {
 		[key: number]: string;
 	};
