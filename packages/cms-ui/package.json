@@ -3,7 +3,7 @@
   "sideEffects": false,
   "packageManager": "yarn@4.0.1",
   "description": "Salin CMS UI",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -47,11 +47,11 @@
     "typescript": "5.1.6"
   },
   "peerDependencies": {
+    "@emotion/react": ">=11.11.1",
+    "@emotion/styled": ">=11.11.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
-    "react-router-dom": ">=6.0.0",
-    "@emotion/react": ">=11.11.1",
-    "@emotion/styled": ">=11.11.0"
+    "react-router-dom": ">=6.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
